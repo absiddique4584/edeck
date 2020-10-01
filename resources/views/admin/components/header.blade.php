@@ -127,7 +127,7 @@
                                 </li>
 
                                 <!--CATEGORIES-->
-                                <li class="has-child-item {{ request()->is('categories','categories/*','sub-categories','sub-categories/*') ? 'open-item active-item':'' }} close-item">
+                                <li class="has-child-item {{ request()->is('categories','categories/*') ? 'open-item active-item':'' }} close-item">
                                     <a><i class="fa fa-list" aria-hidden="true"></i><span>Categories</span></a>
                                     <ul class="nav child-nav level-1">
                                         <li class="{{ request()->is('categories/add','categories/edit/*') ? 'active-item':'' }}"><a href="{{ route('categories.create') }}">Add Category</a></li>
