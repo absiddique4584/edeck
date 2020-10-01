@@ -11,42 +11,15 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker\Factory::create();
+        $categories = ["Groceries", "Mobiles & Tablets", "Computers & Laptops", "Bags & Travel", "Watches & Accessories", "Sports & Outdoors", "Men's Fashion", "Women's Fashion", "Home & Lifestyle", "Health & Beauty"];
 
-        foreach (range(1,20) as $index){
-            $category = $faker->unique()->name;
+        foreach ($categories as $category) {
             Category::create([
-                'name' => $category,
-                'slug' => $this->slugify($category) ,
-                'status' => rand(0,1),
+                'name'   => $category,
+                'slug'   => slugify($category),
+                'status' => 'active'
             ]);
         }
     }
 
-    public function slugify($text)
-    {
-        // replace non letter or digits by -
-        $text = preg_replace('~[^\pL\d]+~u', '-', $text);
-
-        // transliterate
-        $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
-
-        // remove unwanted characters
-        $text = preg_replace('~[^-\w]+~', '', $text);
-
-        // trim
-        $text = trim($text, '-');
-
-        // remove duplicate -
-        $text = preg_replace('~-+~', '-', $text);
-
-        // lowercase
-        $text = strtolower($text);
-
-        if (empty($text)) {
-            return 'n-a';
-        }
-
-        return $text;
-    }
 }

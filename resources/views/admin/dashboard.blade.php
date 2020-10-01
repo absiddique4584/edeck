@@ -1,17 +1,23 @@
 @extends('admin.components.layout')
 @section('title')
-    Edeck | Dashboard
+    Edeck | Manage Brand
 @endsection
 
 @section('content')
-    <div class="page-header">
-        <div class="page-header-content header-elements-md-inline">
-            <div class="page-title d-flex">
-                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Dashboard</h4>
-                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
-            </div>
-
-
+    <div class="content-header">
+        <!-- leftside content header -->
+        <div class="leftside-content-header">
+            <ul class="breadcrumbs">
+                <li><i class="fa fa-home" aria-hidden="true"></i><a href="{{route('home')}}">Dashboard</a></li>
+                <li><a href="{{route('brand.manage')}}">Manage Brands</a></li>
+            </ul>
+        </div>
+    </div><br/><br/>
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <div class="row animated fadeInRight">
+        <div class="col-sm-12">
+            <h6>Hello This is Dashboard</h6>
         </div>
     </div>
 @endsection
+
