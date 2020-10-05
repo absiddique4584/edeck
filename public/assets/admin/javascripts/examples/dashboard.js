@@ -354,7 +354,7 @@ $('body').on('change', ".buying_price", function () {
 
     $('.loader__').show();
         $.ajax({
-            url: site_url+"products/updateBuyingPrice/" + id + '/' +price,
+            url: "products/updateBuyingPrice/" + id + '/' +price,
             method: 'get',
             success: function (result) {
 
@@ -379,7 +379,7 @@ $('body').on('change', ".selling_price", function () {
     $('.loader__').show();
     $.ajax({
         data:{ id: id, price: price },
-        url: site_url + "products/update-selling-Price" ,
+        url: "products/update-selling-Price" ,
         method: 'post',
         beforeSend: function (request) {
             return request.setRequestHeader('X-CSRF-Token', $("meta[name='csrf-token']").attr('content'));
@@ -405,7 +405,7 @@ $('body').on('change', ".special_price", function () {
     $('.loader__').show();
     $.ajax({
         data:{ id: id, price: price },
-        url: site_url + "products/update-special-Price" ,
+        url: "products/update-special-Price" ,
         method: 'post',
         beforeSend: function (request) {
             return request.setRequestHeader('X-CSRF-Token', $("meta[name='csrf-token']").attr('content'));

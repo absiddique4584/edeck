@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\SubCategory;
-use App\Http\Requests\ProductRequest;
 use App\Models\Category;
 use App\Models\Brand;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -108,15 +107,26 @@ class ProductController extends Controller
 
 
 
-
-
     /**
-     * @param ProductRequest $request
+     * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
 
+        $request->validate([
+            'cat_id'          => 'required',
+            'subcat_id'          => 'required',
+            'brand_id'          => 'required',
+            'name'          => 'required',
+            'model'         => 'required',
+            'quantity'      => 'required',
+            'buying_price'  => 'required',
+            'selling_price' => 'required',
+            'thumbnail'     => 'required',
+            'description'     => 'required',
+            'status'          => 'required',
+        ]);
         $product = null;
         try {
             //thumbnail section
@@ -223,18 +233,27 @@ class ProductController extends Controller
 
 
 
-
-
-
     /**
      * @param Request $request
-     * @param $id
+     * @param         $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(ProductRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $products = Product::find($id);
-
+        $request->validate([
+            'cat_id'          => 'required',
+            'subcat_id'          => 'required',
+            'brand_id'          => 'required',
+            'name'          => 'required',
+            'model'         => 'required',
+            'quantity'      => 'required',
+            'buying_price'  => 'required',
+            'selling_price' => 'required',
+            'thumbnail'     => 'required',
+            'description'     => 'required',
+            'status'          => 'required',
+        ]);
         $product = null;
         try {
             //thumbnail section
