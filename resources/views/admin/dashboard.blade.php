@@ -1,6 +1,6 @@
 @extends('admin.components.layout')
 @section('title')
-    Edeck | Manage Brand
+    Edeck | Admin Dashboard
 @endsection
 
 @section('content')
@@ -8,8 +8,7 @@
         <!-- leftside content header -->
         <div class="leftside-content-header">
             <ul class="breadcrumbs">
-                <li><i class="fa fa-home" aria-hidden="true"></i><a href="{{route('home')}}">Dashboard</a></li>
-                <li><a href="{{route('brand.manage')}}">Manage Brands</a></li>
+                <li><i class="fa fa-home" aria-hidden="true"></i><a href="{{route('home')}}">Admin > Dashboard</a></li>
             </ul>
         </div>
     </div><br/><br/>

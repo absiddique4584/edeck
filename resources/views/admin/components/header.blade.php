@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
-    <link rel="icon" href="{{ asset('assets/admin/favicon/apple-icon-120x120.png') }}">
+    <link rel="icon" href="{{ asset('assets/admin/images/index.png') }}">
     <!--load progress bar-->
     <script src="{{ asset('assets/admin/vendor/pace/pace.min.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('assets/admin/loader-css.css') }}">
@@ -117,6 +117,16 @@
                             <ul class="nav nav-left-lines" id="main-nav">
                                 <!--HOME-->
                                 <li class="{{ request()->is('home') ? 'active-item':'' }}"><a href="{{ route('home') }}"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
+
+                                <!--SLIDERS-->
+                                <li class="has-child-item {{ request()->is('sliders','sliders/*') ? 'open-item active-item':'' }} close-item">
+                                    <a><i class="fa fa-gift" aria-hidden="true"></i><span>Sliders</span></a>
+                                    <ul class="nav child-nav level-1">
+                                        <li class="{{ request()->is('sliders/add','sliders/edit/*') ? 'active-item':'' }}"><a href="{{ route('sliders.create') }}">Add Slider</a></li>
+                                        <li class="{{ request()->is('sliders') ? 'active-item':'' }}"><a href="{{ route('sliders.manage') }}">Manage Sliders</a></li>
+                                    </ul>
+                                </li>
+
                                 <!--BRANDS-->
                                 <li class="has-child-item {{ request()->is('brands','brands/*') ? 'open-item active-item':'' }} close-item">
                                     <a><i class="fa fa-life-bouy" aria-hidden="true"></i><span>Brands</span></a>
@@ -132,6 +142,24 @@
                                     <ul class="nav child-nav level-1">
                                         <li class="{{ request()->is('categories/add','categories/edit/*') ? 'active-item':'' }}"><a href="{{ route('categories.create') }}">Add Category</a></li>
                                         <li class="{{ request()->is('categories') ? 'active-item':'' }}"><a href="{{ route('categories.manage') }}">Manage Categories</a></li>
+                                    </ul>
+                                </li>
+
+                                <!--SUBCATEGORIES-->
+                                <li class="has-child-item {{ request()->is('subcategories','subcategories/*') ? 'open-item active-item':'' }} close-item">
+                                    <a><i class="fa fa-circle-o" aria-hidden="true"></i><span>SubCategories</span></a>
+                                    <ul class="nav child-nav level-1">
+                                        <li class="{{ request()->is('subcategories/add','subcategories/edit/*') ? 'active-item':'' }}"><a href="{{ route('subcategories.create') }}">Add SubCategories</a></li>
+                                        <li class="{{ request()->is('subcategories') ? 'active-item':'' }}"><a href="{{ route('subcategories.manage') }}">Manage SubCategories</a></li>
+                                    </ul>
+                                </li>
+
+                                <!--PRODUCTS-->
+                                <li class="has-child-item {{ request()->is('products','products/*') ? 'open-item active-item':'' }} close-item">
+                                    <a><i class="fa fa-pie-chart" aria-hidden="true"></i><span>Products</span></a>
+                                    <ul class="nav child-nav level-1">
+                                        <li class="{{ request()->is('products/add','products/edit/*') ? 'active-item':'' }}"><a href="{{ route('products.create') }}">Add Product</a></li>
+                                        <li class="{{ request()->is('products') ? 'active-item':'' }}"><a href="{{ route('products.manage') }}">Manage Products</a></li>
                                     </ul>
                                 </li>
 

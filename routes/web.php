@@ -38,5 +38,50 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/delete/{id}', 'Admin\CategoryController@delete')->name('delete');
         Route::get('/update-status/{id}/{status}', 'Admin\CategoryController@updateStatus')->name('update.status');
     });
+    /**
+     * SubCategory Routes
+     */
+    Route::prefix('subcategories')->name('subcategories.')->group(function () {
+        Route::get('/', 'Admin\SubCategoryController@index')->name('manage');
+        Route::get('/add', 'Admin\SubCategoryController@create')->name('create');
+        Route::post('/store', 'Admin\SubCategoryController@store')->name('store');
+        Route::get('/edit/{id}', 'Admin\SubCategoryController@edit')->name('edit');
+        Route::put('/update', 'Admin\SubCategoryController@update')->name('update');
+        Route::get('/delete/{id}', 'Admin\SubCategoryController@delete')->name('delete');
+        Route::get('/update-status/{id}/{status}', 'Admin\SubCategoryController@updateStatus')->name('update.status');
+    });
+
+    /**
+     * Slider Routes
+     */
+    Route::prefix('sliders')->name('sliders.')->group(function () {
+        Route::get('/', 'Admin\SliderController@index')->name('manage');
+        Route::get('/add', 'Admin\SliderController@create')->name('create');
+        Route::post('/store', 'Admin\SliderController@store')->name('store');
+        Route::get('/edit/{id}', 'Admin\SliderController@edit')->name('edit');
+        Route::post('/update/{id}', 'Admin\SliderController@update')->name('update');
+        Route::get('/delete/{id}', 'Admin\SliderController@delete')->name('delete');
+        Route::get('/update-status/{id}/{status}', 'Admin\SliderController@updateStatus')->name('update.status');
+    });
+
+
+    /**
+     * Products Route
+     */
+    Route::prefix('products')->name('products.')->group(function () {
+        Route::get('/', 'Admin\ProductController@index')->name('manage');
+        Route::get('/add', 'Admin\ProductController@create')->name('create');
+        Route::post('/store', 'Admin\ProductController@store')->name('store');
+        Route::get('/edit/{id}', 'Admin\ProductController@edit')->name('edit');
+        Route::post('/update/{id}', 'Admin\ProductController@update')->name('update');
+        Route::get('/delete/{id}', 'Admin\ProductController@delete')->name('delete');
+        Route::get('/find-categories/{id}', 'Admin\ProductController@findCategories');
+        Route::get('/updateBuyingPrice/{id}/{p}', 'Admin\ProductController@updateBuyingPrice');
+        Route::post('/update-selling-Price', 'Admin\ProductController@updateSellingPrice');
+        Route::post('/update-special-Price', 'Admin\ProductController@updateSpecialPrice');
+        Route::get('/update-status/{id}/{status}', 'Admin\ProductController@updateStatus')->name('update.status');
+        Route::get('/hot-deals/{id}/{hot_deals}', 'Admin\ProductController@hotDeals')->name('hot.deals');
+        Route::get('/f_products/{id}/{f_products}', 'Admin\ProductController@f_products')->name('feature.products');
+    });
 
 });

@@ -55,7 +55,6 @@ $(function () {
 
 
     //MAGNIFIC POPUP GALLERY
-    // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     $('.gallery-wrap').magnificPopup({
         delegate: 'a',
         type: 'image',
@@ -77,7 +76,11 @@ $(function () {
 
 
 
-
+/**
+ *
+ * @type {string}
+ */
+const site_url = "http://localhost/edeck/";
 
 $('body').on('change', "#brandStatus", function () {
     var id = $(this).attr('data-id');
@@ -109,7 +112,7 @@ $('body').on('change', "#hotDeals", function () {
     }
     $('.loader__').show();
     $.ajax({
-        url: "products/hot-deals/" + id + '/' + hot_deals,
+        url: site_url+"products/hot-deals/" + id + '/' + hot_deals,
         method: 'get',
         success: function (result) {
             $('.loader__').hide();
@@ -131,7 +134,7 @@ $('body').on('change', "#fProducts", function () {
     }
     $('.loader__').show();
     $.ajax({
-        url: "products/f_products/" + id + '/' + f_products,
+        url: site_url+"products/f_products/" + id + '/' + f_products,
         method: 'get',
         success: function (result) {
             $('.loader__').hide();
@@ -166,10 +169,9 @@ $('body').on('change', "#topbrandStatus", function () {
 });
 
 
-
-
-
-
+/**
+ * categorystatus
+ */
 $('body').on('change', "#categoryStatus", function () {
     var id = $(this).attr('data-id');
     if (this.checked) {
@@ -196,8 +198,6 @@ $('body').on('change', "#categoryStatus", function () {
  *
  * @type {string}
  */
-const site_url = "http://localhost/ecommerce-shop/";
-
 $('body').on('change', "#subCategoryStatus", function () {
     var id = $(this).attr('data-id');
     if (this.checked) {
@@ -207,7 +207,7 @@ $('body').on('change', "#subCategoryStatus", function () {
     }
     $('.loader__').show();
     $.ajax({
-        url: "sub-categories/update-status/" + id + '/' + status,
+        url: "subcategories/update-status/" + id + '/' + status,
         method: 'get',
         success: function (result) {
             $('.loader__').hide();
@@ -268,7 +268,6 @@ $('body').on('change', "#sliderStatus", function () {
 /**
  * productStatus
  */
-
 $('body').on('change', "#productStatus", function () {
     var id = $(this).attr('data-id');
     if (this.checked) {
@@ -278,7 +277,7 @@ $('body').on('change', "#productStatus", function () {
     }
     $('.loader__').show();
     $.ajax({
-        url: "products/update-status/" + id + '/' + status,
+        url: site_url+"products/update-status/" + id + '/' + status,
         method: 'get',
         success: function (result) {
             $('.loader__').hide();
@@ -293,7 +292,6 @@ $('body').on('change', "#productStatus", function () {
 /*
 warranty show hide
  */
-
 $('body').on('change', 'input[name="warranty"]', function () {
     var n = $(this).val();
 
@@ -306,10 +304,11 @@ $('body').on('change', 'input[name="warranty"]', function () {
 });
 
 
+
+
 /*
 Profile Create Sectionm
  */
-
 $('body').on('change', 'input[name="create"]', function () {
     var n = $(this).val();
 
@@ -328,26 +327,20 @@ $('body').on('change', 'input[name="create"]', function () {
 /*
 sub category filtering
  */
-
 $('body').on('change', "#cat_id", function () {
     var id = $(this).val();
-
-    if (id !== ''){
-
+    if (id !== '') {
         $('.loader__').show();
-    $.ajax({
-        url: site_url+"products/find-categories/" + id,
-        method: 'get',
-        success: function (result) {
-            $('#subcat_id').html(result);
-
-            $('.loader__').hide();
-        }
-    });
+        $.ajax({
+            url: "find-categories/" + id,
+            method: 'get',
+            success: function (result) {
+                $("#subcat_id").html(result);
+                $('.loader__').hide();
+            }
+        });
     }
 });
-
-
 
 
 
@@ -355,7 +348,6 @@ $('body').on('change', "#cat_id", function () {
 /*
 buying_price
  */
-
 $('body').on('change', ".buying_price", function () {
     var price = $(this).val();
     var id = $(this).attr('data-id');
