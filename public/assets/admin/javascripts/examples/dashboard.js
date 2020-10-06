@@ -286,6 +286,27 @@ $('body').on('change', "#productStatus", function () {
 });
 
 
+/**
+ * AfterSliderStatus
+ */
+$('body').on('change', "#AfterSliderStatus", function () {
+    var id = $(this).attr('data-id');
+    if (this.checked) {
+        var status = 'active';
+    } else {
+        status = 'inactive';
+    }
+    $('.loader__').show();
+    $.ajax({
+        url: "aftersliders/update-status/" + id + '/' + status,
+        method: 'get',
+        success: function (result) {
+            $('.loader__').hide();
+        }
+    });
+});
+
+
 
 
 

@@ -127,6 +127,15 @@
                                     </ul>
                                 </li>
 
+                                <!--After SLIDERS-->
+                                <li class="has-child-item {{ request()->is('aftersliders','aftersliders/*') ? 'open-item active-item':'' }} close-item">
+                                    <a><i class="fa fa-sliders" aria-hidden="true"></i><span>AfterSliders</span></a>
+                                    <ul class="nav child-nav level-1">
+                                        <li class="{{ request()->is('aftersliders/add','aftersliders/edit/*') ? 'active-item':'' }}"><a href="{{ route('aftersliders.create') }}">Add AfterSlider</a></li>
+                                        <li class="{{ request()->is('aftersliders') ? 'active-item':'' }}"><a href="{{ route('aftersliders.manage') }}">Manage AfterSlider</a></li>
+                                    </ul>
+                                </li>
+
                                 <!--BRANDS-->
                                 <li class="has-child-item {{ request()->is('brands','brands/*') ? 'open-item active-item':'' }} close-item">
                                     <a><i class="fa fa-life-bouy" aria-hidden="true"></i><span>Brands</span></a>

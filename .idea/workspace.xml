@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="02a91f9c-55ee-4392-80a0-534f4b7e5ced" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AfterSliderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/AfterSlider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_06_053252_create_after_sliders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/AfterSliderTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/afterslider/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/afterslider/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/afterslider/manage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProductRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/website/WebsiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/website/WebsiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/javascripts/examples/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/javascripts/examples/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/product/20201004114728.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/product/202010041147300.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/product/202010041147311.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/product/202010041147312.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/components/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/website/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +214,10 @@
       <workItem from="1601801998680" duration="1589000" />
       <workItem from="1601806424929" duration="5627000" />
       <workItem from="1601891988099" duration="1640000" />
-      <workItem from="1601901273535" duration="2287000" />
+      <workItem from="1601901273535" duration="2923000" />
+      <workItem from="1601954644580" duration="57000" />
+      <workItem from="1601960712718" duration="1804000" />
+      <workItem from="1601974784816" duration="4967000" />
     </task>
     <servers />
   </component>
@@ -214,6 +228,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="370" y="137" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601976172704">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="370" y="137" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1601976172704" />
     <state x="420" y="137" key="FileChooserDialogImpl" timestamp="1596552911455">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
@@ -234,10 +252,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state width="1237" height="189" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1596537303656" />
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1601902593788">
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1601977019533">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1601902593788" />
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1601977019533" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

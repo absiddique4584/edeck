@@ -65,6 +65,21 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
+
+    /**
+     * AfterSlider Routes
+     */
+    Route::prefix('aftersliders')->name('aftersliders.')->group(function () {
+        Route::get('/', 'Admin\AfterSliderController@index')->name('manage');
+        Route::get('/add', 'Admin\AfterSliderController@create')->name('create');
+        Route::post('/store', 'Admin\AfterSliderController@store')->name('store');
+        Route::get('/edit/{id}', 'Admin\AfterSliderController@edit')->name('edit');
+        Route::post('/update/{id}', 'Admin\AfterSliderController@update')->name('update');
+        Route::get('/delete/{id}', 'Admin\AfterSliderController@delete')->name('delete');
+        Route::get('/update-status/{id}/{status}', 'Admin\AfterSliderController@updateStatus')->name('update.status');
+    });
+
+
     /**
      * Products Route
      */
