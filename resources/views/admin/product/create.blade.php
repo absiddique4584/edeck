@@ -130,7 +130,7 @@
                             <div class="col-sm-6">
                                 <label for="thumbnail" class=" control-label">Thumbnail</label>
 								<br/>
-                                <input style="display:none;" type="file" class="" id="thumbnail" data-id="thumbnail" onChange="previewImage(this)" name="thumbnail" value="{{ old('thumbnail') }}" required placeholder="Thumbnail">
+                                <input style="display:none;" type="file" class="" id="thumbnail" data-id="thumbnail" onChange="previewImage(this)" name="thumbnail"  required >
 								<input type="button" data-id="thumbnail" class="btn btn-info fileClick" value="Select Thumbnail"/>
 								 <a href=""class="image">
 								<img style=" height:100px;" src="" id="preview_thumbnail" alt=""/>
@@ -175,8 +175,8 @@
 
                             <!------Warranty Condition------->
                             <div class="col-sm-12">
-                                <label for="warranty_condition" class=" control-label">Warranty Condition</label>
-                                <textarea class="form-control summernote" id="warranty_condition" name="warranty_condition"></textarea>
+                                <label for="warranty_conditions" class=" control-label">Warranty Condition</label>
+                                <textarea class="form-control summernote" id="warranty_conditions" name="warranty_conditions"></textarea>
                             </div>
                         </div>
                             <!------------------>

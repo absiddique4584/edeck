@@ -159,7 +159,7 @@ class ProductController extends Controller
                 'video_url' =>$request->video_url,
                 'warranty' =>$request->warranty,
                 'warranty_duration' =>$request->warranty_duration,
-                'warranty_condition' =>$request->warranty_condition,
+                'warranty_conditions' =>$request->warranty_conditions,
                 'thumbnail' =>$thumbnailName,
                 'gallery' =>json_encode($gallery),
                 'description' =>$request->description,
@@ -171,7 +171,7 @@ class ProductController extends Controller
             ]);
 
         } catch (Exception $exception) {
-
+            //dd($exception);
             $product = false;
         }
 
@@ -252,7 +252,6 @@ class ProductController extends Controller
             'selling_price' => 'required',
             'thumbnail'     => 'required',
             'description'     => 'required',
-            'status'          => 'required',
         ]);
         $product = null;
         try {
@@ -286,26 +285,26 @@ class ProductController extends Controller
                 'video_url' =>$request->video_url,
                 'warranty' =>$request->warranty,
                 'warranty_duration' =>$request->warranty_duration,
-                'warranty_condition' =>$request->warranty_condition,
+                'warranty_conditions' =>$request->warranty_conditions,
                 'thumbnail' =>$thumbnailName2,
                 'gallery' =>json_encode($gallery),
                 'description' =>$request->description,
                 'long_description' =>$request->long_description,
                 'hot_deals' =>$request->hot_deals,
                 'f_products' =>$request->f_products,
-                'status' =>$request->status,
 
             ]);
 
         } catch (Exception $exception) {
+       dd($exception);
 
             $product = false;
         }
 
         if ($product) {
-            setMessage('success', 'Yay! A Product has been successfully created.');
+            setMessage('success', 'Yay! A Product has been successfully updated.');
         } else {
-            setMessage('danger', 'Oops! Unable to create a new Product.');
+            setMessage('danger', 'Oops! Unable to updated a new Product.');
         }
         return redirect()->back();
     }

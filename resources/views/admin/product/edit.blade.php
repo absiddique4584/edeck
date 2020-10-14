@@ -28,10 +28,8 @@
                         </div>
                     </div>
                     <hr style="margin-top: 0">
-                    <form class="form-horizontal" method="POST" action="{{ route('products.update',$products->id) }}" enctype="multipart/form-data">
+                    <form class="form-horizontal" method="POST" action="{{ route('products.update',$products->id) }}" enctype="multipart/form-data" >
                         @csrf
-
-
                             <div class="form-group">
                                 <!------Category ------->
                                 <input type="hidden" id="cat_id" value="{{$products->cat_id}}">
@@ -133,15 +131,21 @@
                                 </div>
                                 <!------------------>
                                 <!------Thumbnail------->
+
+
                                 <div class="col-sm-6">
                                     <label for="thumbnail" class=" control-label">Thumbnail</label>
-                                    <br/>
-                                    <input style="display:none;" type="file" class="" id="thumbnail" data-id="thumbnail" onChange="previewImage(this)" name="thumbnail" value="{{ $products->thumbnail }}" required placeholder="Thumbnail">
-                                    <input type="button" data-id="thumbnail" class="btn btn-info fileClick" value="Select Thumbnail"/>
+                                    <br>
+                                    <input style="display:none;" type="file" class="" id="thumbnail" data-id="thumbnail" onChange="previewImage(this)" name="thumbnail" value="{{ old('thumbnail') }}" required >
+                                    <input type="button" data-id="thumbnail" class="btn btn-info fileClick" value="{{ $products->thumbnail }}"/>
                                     <a href=""class="image">
-                                        <img style="width:60px; height:60px;" src="" class="img-thumbnail" id="preview_thumbnail" alt=""/>
-                                </div>
 
+                                        <img style=" height:100px;" src=""  id="preview_image" alt="" />
+                                        <br>
+                                        <img  style="height: 100px;" src="{{ asset('uploads/product/'.$products->thumbnail) }}"  alt="">
+                                    </a>
+
+                                </div>
 
                                 <!------------------>
 
@@ -149,23 +153,37 @@
                                 <!------Gallery------->
                                 <div class="col-sm-6">
                                     <label for="gallery" class=" control-label">Gallery</label>
-                                    <input  type="file" class="" id="gallery" name="gallery[]" value="{{ $products->gallery }}" multiple >
+                                    <input id="files" type="file" name="gallery[]" multiple data-id="gallary" />
+                                    <div id="result" ></div>
+                                    <a href=""class="image">
+
+                                        <img style=" height:100px;" src=""  id="preview_image" alt="" />
+                                        <img  style="height: 100px;" src="{{ asset('uploads/product/'.$products->gallery) }}"  alt="">
+
+                                    </a>
                                 </div>
                                 <!------------------>
 
+                                <!------Warranty ------->
 
+
+                                <div class="col-sm-6">
+                                    <label for="warranty" class=" control-label">Warranty ( Yes = 1 , No = 0 )</label>
+                                    <input type="text" class="form-control " id="warranty" name="warranty" value="{{ $products->warranty }}"  >
+                                </div>
+                                <!------------------>
                                 <!------Warranty_duration------->
 
                                     <div class="col-sm-6">
                                         <label for="warranty_duration" class=" control-label">Warranty Duration</label>
-                                        <input  type="text" class="form-control " id="warranty_duration" name="warranty_duration" value="{{ $products->warranty_duration }}"  placeholder="Warranty Duration">
+                                        <input  type="text" class="form-control " id="warranty_duration" name="warranty_duration" value="{{ $products->warranty_duration }}" >
                                     </div>
                                     <!------------------>
 
                                     <!------Warranty Condition------->
                                     <div class="col-sm-12">
-                                        <label for="warranty_condition" class=" control-label">Warranty Condition</label>
-                                        <textarea class="form-control summernote" id="warranty_condition" name="warranty_condition" value="{{ $products->warranty_condition }}"></textarea>
+                                        <label for="warranty_conditions" class=" control-label">Warranty Condition</label>
+                                        <textarea class="form-control summernote" id="warranty_conditions" name="warranty_conditions" >{{ $products->warranty_conditions }}</textarea>
                                     </div>
 
                                 <!------------------>
@@ -173,64 +191,46 @@
                                 <!------Description------->
                                 <div class="col-sm-12">
                                     <label for="description" class=" control-label">Description</label>
-                                    <textarea class="form-control summernote" id="description" name="description" ></textarea>
+                                    <textarea class="form-control summernote" id="description" name="description" >{{ $products->description }}</textarea>
                                 </div>
                                 <!------------------>
 
                                 <!------Long Description------->
                                 <div class="col-sm-12">
                                     <label for="long_description" class=" control-label">Long Description</label>
-                                    <textarea class="form-control summernote" id="long_description" name="long_description" >Long Description</textarea>
+                                    <textarea class="form-control summernote" id="long_description" name="long_description"  >{{ $products->long_description }}</textarea>
                                 </div>
 
                                 <!------------------>
                                 <!------Feature Products ------->
                                 <div class="col-sm-6">
                                     <label for="hot_deals" class=" control-label">Hot Deals</label>
-                                    <input type="number" class="form-control " id="hot_deals" name="hot_deals" value="{{ $products->hot_deals }}"  placeholder="Hot Deals">
+                                    <input type="number" class="form-control " id="hot_deals" name="hot_deals" value="{{ $products->hot_deals }}" >
                                 </div>
                                 <!------------------>
 
                                 <!------Feature Products ------->
                                 <div class="col-sm-6">
                                     <label for="f_products" class=" control-label">Feature Products</label>
-                                    <input type="number" class="form-control " id="f_products" name="f_products" value="{{ $products->f_products }}"  placeholder="Feature Products">
+                                    <input type="number" class="form-control " id="f_products" name="f_products" value="{{ $products->f_products }}" >
                                 </div>
                                 <!------------------>
 
-                                <!------Status ------->
-
-                                <div style="margin-top: 18px;" class="col-md-12 text-center ">
-                                    <label   for="status" class=" control-label">STATUS : </label>
-
-                                    <div class="radio radio-custom radio-inline radio-primary">
-                                        <input type="radio" id="status1" name="status" value="active">
-                                        <label for="status1"> Active</label>
-                                    </div>
-                                    <div class="radio radio-custom radio-inline radio-danger">
-                                        <input type="radio" id="status2" name="status" value="inactive">
-                                        <label for="status2">Inactive</label>
-                                    </div>
-                                </div>
-
-
-
                             </div>
-
 
 
                         <div class="row form-group">
-                            <div class="col-sm-3"></div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-12 text-right">
                                 <button type="submit" class="btn btn-primary">Update Product</button>
                             </div>
                         </div>
+
                     </form>
 
                 </div>
             </div>
         </div>
     </div>
-    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+
 
 @endsection

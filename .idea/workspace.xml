@@ -5,22 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02a91f9c-55ee-4392-80a0-534f4b7e5ced" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AfterSliderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/AfterSlider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_06_053252_create_after_sliders_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/AfterSliderTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/afterslider/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/afterslider/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/afterslider/manage.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/20201013065740.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130657410.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130657421.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130657422.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/20201013065941.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130659420.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130659421.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130659422.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/20201013070203.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130702040.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130702041.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130702052.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/20201014042521.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010140425230.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010140425231.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010140425232.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/website/WebsiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/website/WebsiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/javascripts/examples/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/javascripts/examples/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/components/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/website/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +165,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -218,6 +228,9 @@
       <workItem from="1601954644580" duration="57000" />
       <workItem from="1601960712718" duration="1804000" />
       <workItem from="1601974784816" duration="4967000" />
+      <workItem from="1602570035770" duration="4335000" />
+      <workItem from="1602640688978" duration="1037000" />
+      <workItem from="1602644187048" duration="5338000" />
     </task>
     <servers />
   </component>
@@ -252,10 +265,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state width="1237" height="189" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1596537303656" />
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1601977019533">
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1602648432501">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1601977019533" />
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1602648432501" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
