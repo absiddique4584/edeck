@@ -16,47 +16,25 @@
                     <nav class="yamm megamenu-horizontal" role="navigation">
                         <ul class="nav">
 
-                            <li class="dropdown menu-item">
-                                @foreach($categories as $category)
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="icon {{$category->icon}}" aria-hidden="true"></i>{{$category->name}}</a>
-                                @endforeach
-                                <ul class="dropdown-menu mega-menu">
-                                    <li class="yamm-content">
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-3">
-                                                <ul class="links list-unstyled">
-                                                    <li><a href="#">Dresses</a></li>
-                                                    <li><a href="#">Shoes </a></li>
-                                                    <li><a href="#">Jackets</a></li>
-                                                </ul>
-                                            </div><!-- /.col -->
-                                            <div class="col-sm-12 col-md-3">
-                                                <ul class="links list-unstyled">
-                                                    <li><a href="#">Handbags</a></li>
-                                                    <li><a href="#">Jwellery</a></li>
-                                                    <li><a href="#">Swimwear </a></li>
-                                                </ul>
-                                            </div><!-- /.col -->
-                                            <div class="col-sm-12 col-md-3">
-                                                <ul class="links list-unstyled">
-                                                    <li><a href="#">Toys &amp; Games</a></li>
-                                                    <li><a href="#">Jeans</a></li>
-                                                    <li><a href="#">Shirts</a></li>
-                                                </ul>
-                                            </div><!-- /.col -->
-                                            <div class="col-sm-12 col-md-3">
-                                                <ul class="links list-unstyled">
-                                                    <li><a href="#">Sandals </a></li>
-                                                    <li><a href="#">Shorts</a></li>
-                                                    <li><a href="#">Dresses</a></li>
 
-                                                </ul>
-                                            </div><!-- /.col -->
-                                        </div><!-- /.row -->
-                                    </li><!-- /.yamm-content -->
-                                </ul><!-- /.dropdown-menu -->
-                            </li><!-- /.menu-item -->
+                            @foreach($categories as $row)
+                                <li class="dropdown menu-item">
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon {{$row->icon}}" aria-hidden="true"></i>{{$row->name}}</a>
+                                    <ul class="dropdown-menu mega-menu">
+                                        <li class="yamm-content">
+                                            <div class="row">
+                                                @foreach($row->sub_categories as $sub_categorie)
+                                                    <div class="col-sm-4 col-md-3">
+                                                        <a href="#">{{ $sub_categorie->name }}</a>
+                                                    </div><!-- /.col -->
+                                                @endforeach
+                                            </div><!-- /.row -->
+                                        </li><!-- /.yamm-content -->
+                                    </ul><!-- /.dropdown-menu -->
+                                </li><!-- /.menu-item -->
+                            @endforeach
+
 
                         </ul><!-- /.nav -->
                     </nav><!-- /.megamenu-horizontal -->

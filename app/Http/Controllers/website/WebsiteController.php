@@ -19,7 +19,8 @@ class WebsiteController extends Controller
         //afterslider
         $aftersliders = AfterSlider::where('status','active')->get();
         //categories
-        $categories = Category::select('id','name','icon')->get();
+        $categories = Category::with('sub_categories')->select('id','name','icon')->orderBy('id','desc')->get();
+        //return $categories;
         return view('website.index',compact('brands','sliders','aftersliders','categories'));
     }
 }
