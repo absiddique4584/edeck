@@ -17,6 +17,7 @@ class CategoryTableSeeder extends Seeder
             Category::create([
                 'name'   => $category,
                 'slug'   => slugify($category),
+                'icon' => 'fa fa-home',
                 'status' => 'active'
             ]);
         }

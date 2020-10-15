@@ -5,26 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02a91f9c-55ee-4392-80a0-534f4b7e5ced" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/20201013065740.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130657410.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130657421.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130657422.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/20201013065941.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130659420.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130659421.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130659422.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/20201013070203.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130702040.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130702041.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010130702052.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/20201014042521.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010140425230.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010140425231.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/product/202010140425232.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_13_052526_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_13_052526_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CategoryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategoryTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/manage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/manage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/website/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +219,8 @@
       <workItem from="1601974784816" duration="4967000" />
       <workItem from="1602570035770" duration="4335000" />
       <workItem from="1602640688978" duration="1037000" />
-      <workItem from="1602644187048" duration="5338000" />
+      <workItem from="1602644187048" duration="5527000" />
+      <workItem from="1602756412920" duration="2702000" />
     </task>
     <servers />
   </component>
@@ -265,10 +255,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state width="1237" height="189" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1596537303656" />
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1602648432501">
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1602758154408">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1602648432501" />
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1602758154408" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

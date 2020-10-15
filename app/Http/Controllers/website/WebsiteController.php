@@ -5,6 +5,7 @@ namespace App\Http\Controllers\website;
 use App\Http\Controllers\Controller;
 use App\Models\AfterSlider;
 use App\Models\Brand;
+use App\Models\Category;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -17,6 +18,8 @@ class WebsiteController extends Controller
         $sliders = Slider::select('id','title','sub_title','image','url')->where('status','active')->get();
         //afterslider
         $aftersliders = AfterSlider::where('status','active')->get();
-        return view('website.index',compact('brands','sliders','aftersliders'));
+        //categories
+        $categories = Category::select('id','name','icon')->get();
+        return view('website.index',compact('brands','sliders','aftersliders','categories'));
     }
 }

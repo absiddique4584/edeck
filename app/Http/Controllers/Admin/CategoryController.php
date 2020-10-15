@@ -11,6 +11,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::latest()->get();
+        //return $categories;
         return view('admin.category.manage', compact('categories'));
     }
 
@@ -39,13 +40,15 @@ class CategoryController extends Controller
     {
         $request->validate([
             'name' => 'required|min:5|max:30',
+            'icon'=>'required'
         ]);
         $category = null;
         try {
             $name     = $request->name;
             $category = Category::create([
                 'name' => $name,
-                'slug' => slugify($name)
+                'slug' => slugify($name),
+                'icon' => $request->icon
             ]);
         } catch (Exception $exception) {
             $category = false;
@@ -92,6 +95,8 @@ class CategoryController extends Controller
 
         $request->validate([
             'name' => 'required|min:5|max:20',
+            'icon' => 'required',
+
         ]);
 
         $success = null;
@@ -100,7 +105,7 @@ class CategoryController extends Controller
             $success = $category->update([
                 'name' => $name,
                 'slug' => slugify($name),
-                //'status' => 'active'
+                'icon' => $request->icon
             ]);
         } catch (Exception $exception) {
             $success = false;

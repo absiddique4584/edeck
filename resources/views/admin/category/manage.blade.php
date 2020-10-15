@@ -15,7 +15,7 @@
     </div><br/><br/>
     <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
     <div class="row animated fadeInRight">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-12">
             @includeIf('message.message')
             <div class="panel b-primary bt-md">
                 <div class="panel-content">
@@ -34,6 +34,7 @@
                                 <tr>
                                     <th>Sl No</th>
                                     <th>Name</th>
+                                    <th>Icon</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -43,6 +44,9 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $category->name }}</td>
+                                        <td>
+                                            <i class=" {{ $category->icon }}" ></i> = {{ $category->icon }}
+                                        </td>
                                         <td>
                                             <input type="checkbox"  {{ $category->status === 'active' ? 'checked':'' }} id="categoryStatus" data-id="{{ $category->id }}" data-toggle="toggle" data-on="Active" data-off="Inactive" data-size="mini">
                                         </td>
