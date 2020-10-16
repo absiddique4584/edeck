@@ -16,7 +16,7 @@
             <div class="products">
                 <div class="product">
                     <div class="product-image">
-                        <div class="image"><a href="{{ route('product',$product->slug) }}"><img src="{{ asset('uploads/product/'.$product->thumbnail) }}" alt=""></a></div>
+                        <div class="image"><a href="{{ route('product',$product->slug) }}"><img src="{{ asset('uploads/product/'.$product->thumbnail) }}" style="height: 220px; width: 260px; " alt=""></a></div>
                     </div>
                     <!-- /.product-image -->
                     @php($sPrice = false)

@@ -13,7 +13,7 @@ class ProductTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        foreach (range(1, 200) as $index) {
+        foreach (range(1, 700) as $index) {
             $name = $faker->sentence;
             Product::create([
                 'cat_id'              => rand(1, 10),
