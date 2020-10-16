@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02a91f9c-55ee-4392-80a0-534f4b7e5ced" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/website/CartController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/category.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/get-category-product.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/product.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/website/WebsiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/website/WebsiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/website/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/components/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/website/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +223,9 @@
       <workItem from="1602644187048" duration="5527000" />
       <workItem from="1602756412920" duration="2702000" />
       <workItem from="1602760819742" duration="1563000" />
+      <workItem from="1602763576128" duration="586000" />
+      <workItem from="1602769447699" duration="1608000" />
+      <workItem from="1602820067491" duration="2230000" />
     </task>
     <servers />
   </component>
@@ -249,17 +260,17 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state width="1237" height="189" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1596537303656" />
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1602758154408">
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1602820247344">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1602758154408" />
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1602820247344" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/web.php</url>
-          <line>32</line>
+          <line>44</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

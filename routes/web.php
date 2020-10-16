@@ -3,6 +3,18 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Website\WebsiteController@index')->name('index');
+Route::get('/category/{slug}', 'Website\WebsiteController@category')->name('category');
+Route::post('load-more-category-product', 'Website\WebsiteController@loadMoreCatProduct')->name('load-more-cat-product');
+Route::get('/product/{slug}', 'Website\WebsiteController@product')->name('product');
+
+#cart route
+Route::post('add-to-cart', 'Website\CartController@add')->name('cart.add');
+Route::get('cart/show', 'Website\CartController@show')->name('cart.show');
+Route::post('cart/remove', 'Website\CartController@remove')->name('cart.remove');
+Route::post('cart/update', 'Website\CartController@update')->name('cart.update');
+
+
+
 
 Auth::routes();
 

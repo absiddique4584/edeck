@@ -78,7 +78,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                         <!-- ============================================================= LOGO ============================================================= -->
                         <div class="logo">
-                            <a href="#">
+                            <a href="{{route('index')}}">
 
                                 <img src="{{asset('assets/website/images/index.png')}}" alt="" style="height: 40px; ">
 

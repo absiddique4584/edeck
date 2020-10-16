@@ -2,7 +2,7 @@
 @extends('website.components.layout')
 
 @section('title')
-  Edeck | Online Shopping Mall
+  Edeck
 @endsection
 
 @section('content')
@@ -26,7 +26,7 @@
                                             <div class="row">
                                                 @foreach($row->sub_categories as $sub_categorie)
                                                     <div class="col-sm-4 col-md-3">
-                                                        <a href="#">{{ $sub_categorie->name }}</a>
+                                                        <a href="{{route('category', $sub_categorie->slug)}}">{{ $sub_categorie->name }}</a>
                                                     </div><!-- /.col -->
                                                 @endforeach
                                             </div><!-- /.row -->
