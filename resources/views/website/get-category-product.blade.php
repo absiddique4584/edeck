@@ -16,7 +16,7 @@
             <div class="products">
                 <div class="product">
                     <div class="product-image">
-                        <div class="image"><a href="{{ route('product',$product->slug) }}"><img src="{{ asset('uploads/product/'.$product->thumbnail) }}" style="height: 220px; width: 260px; " alt=""></a></div>
+                        <div class="image"><a href="{{ route('product',$product->slug) }}"><img src="{{ asset('uploads/product/'.$product->thumbnail) }}" style="height: 230px; width: 250px; " alt=""></a></div>
                     </div>
                     <!-- /.product-image -->
                     @php($sPrice = false)
@@ -52,8 +52,6 @@
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
                                     </form>
-
-
 
                                 </li>
                                 <li class="lnk wishlist"><a class="add-to-cart" href="{{ route('product',$product->slug) }}" title="Wishlist"> <i class="icon fa fa-heart"></i> </a></li>

@@ -13,6 +13,13 @@ use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
 {
+
+
+
+
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index(){
         //show brands on top menu
         $brands = Brand::select('id','brand_name','top_brand','status')->where('status','active')->where('top_brand','active')->get();

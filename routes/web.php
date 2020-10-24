@@ -13,6 +13,12 @@ Route::get('cart/show', 'Website\CartController@show')->name('cart.show');
 Route::post('cart/remove', 'Website\CartController@remove')->name('cart.remove');
 Route::post('cart/update', 'Website\CartController@update')->name('cart.update');
 
+#CHECKOUT ROUTE
+Route::get('checkout','Website\CheckoutController@index')->name('site.checkout');
+Route::get('checkout/shipping','Website\CheckoutController@shipping')->name('shipping');
+Route::post('checkout/shipping/info','Website\CheckoutController@shippingInfo')->name('checkout.shipping');
+Route::get('checkout/payment','Website\CheckoutController@payment')->name('checkout.payment');
+Route::post('order','Website\CheckoutController@order')->name('order');
 
 
 

@@ -33,6 +33,7 @@ class Product extends Model
     ];
     public const ACTIVE_PRODUCT = 'active';
     public const INACTIVE_PRODUCT = 'inactive';
+    public const VISIBLE_REVIEW = 'visible';
 
 
 
@@ -44,6 +45,32 @@ class Product extends Model
         return $this->belongsTo(Brand::class);
     }
 
+
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reviews()
+    {
+        return $this->hasMany(ProductReview::class)->where('status',self::VISIBLE_REVIEW);
+    }
+
+
+
+
+
+    /**
+     * @return false|float|int
+     */
+    public function getRating()
+    {
+        $star = $this->reviews()->sum("rating");
+        if ($star == 0) return 0;
+        $avg = $star / $this->reviews()->count();
+
+        return round($avg, 2);
+    }
 
 }
 

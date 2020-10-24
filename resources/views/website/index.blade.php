@@ -2,7 +2,7 @@
 @extends('website.components.layout')
 
 @section('title')
-  Edeck
+  Edeck | Online Shop
 @endsection
 
 @section('content')
