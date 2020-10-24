@@ -231,7 +231,7 @@ $('body').on('change', "#reviewStatus", function () {
     }
     $('.loader__').show();
     $.ajax({
-        url: site_url+"review/review-status/" + id + '/' + status,
+        url: "/review/review-status/" + id + '/' + status,
         method: 'get',
         success: function (result) {
             $('.loader__').hide();

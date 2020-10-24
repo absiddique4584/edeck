@@ -20,6 +20,14 @@ Route::post('checkout/shipping/info','Website\CheckoutController@shippingInfo')-
 Route::get('checkout/payment','Website\CheckoutController@payment')->name('checkout.payment');
 Route::post('order','Website\CheckoutController@order')->name('order');
 
+//Review Route
+Route::post('review/create', 'Website\WebsiteController@reviewCreate')->name('review.create');
+
+#customer login and register route
+Route::post('customer/register','Website\CheckoutController@register')->name('customer.register');
+Route::post('customer/login','Website\CheckoutController@login')->name('customer.login');
+Route::post('customer/logout','Website\CheckoutController@logout')->name('customer.logout');
+
 
 
 Auth::routes();
@@ -116,5 +124,34 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/hot-deals/{id}/{hot_deals}', 'Admin\ProductController@hotDeals')->name('hot.deals');
         Route::get('/f_products/{id}/{f_products}', 'Admin\ProductController@f_products')->name('feature.products');
     });
+
+
+    //Review
+    Route::get('review/manage', 'Admin\ReviewController@manage')->name('manage.review');
+    Route::get('review/show/{id}', 'Admin\ReviewController@review_show')->name('review.show');
+    Route::get('review/delete/{id}', 'Admin\ReviewController@delete')->name('review.delete');
+    Route::get('review/review-status/{id}/{status}', 'Admin\ReviewController@update_review');
+
+
+    //Checkout Route
+    Route::prefix('checkout')->name('checkout.')->group(function () {
+        Route::get('/orders/manage', 'Admin\CheckoutadminController@orders')->name('orders.manage');
+        Route::get('/orders/edit/{id}', 'Admin\CheckoutadminController@edit')->name('orders.edit');
+        Route::post('orders/update', 'Admin\CheckoutadminController@update')->name('orders.update');
+        Route::get('/delete/{id}', 'Admin\CheckoutadminController@delete')->name('orders.delete');
+        Route::get('/orders/view/{id}', 'Admin\CheckoutadminController@view')->name('orders.view');
+        Route::get('/orders/invoice/{id}', 'Admin\CheckoutadminController@invoice')->name('orders.invoice');
+
+        Route::get('/customers/manage', 'Admin\CheckoutadminController@customerInfo')->name('customers.manage');
+        Route::get('/customers/delete/{id}', 'Admin\CheckoutadminController@customerDelete')->name('customers.delete');
+
+
+    });
+    Route::post('view/orders/update-status', 'Admin\CheckoutadminController@viewUpdateStatus');
+    Route::post('view/payments/update-status', 'Admin\CheckoutadminController@UpdatePaymentStatus');
+    Route::post('shipping/shipping-charge', 'Admin\CheckoutadminController@shippingCharge');
+    Route::get('print-invoice/{id}','Admin\CheckoutadminController@printInvoice')->name('print-invoice');
+
+
 
 });

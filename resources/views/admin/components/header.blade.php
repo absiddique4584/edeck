@@ -173,6 +173,26 @@
                                 </li>
 
 
+
+                                <!--Review-->
+                                <li class="has-child-item {{ request()->is('review/manage','review/show/*') ? 'open-item active-item':'' }} close-item">
+                                    <a><i class="fa fa-renren" aria-hidden="true"></i><span>Reviews</span></a>
+                                    <ul class="nav child-nav level-1">
+                                        <li class="{{ request()->is('review/manage') ? 'active-item':'' }}"><a href="{{ route('manage.review') }}">Manage Review</a></li>
+                                    </ul>
+                                </li>
+
+
+
+                                <!--ORDERS-->
+                                <li class="has-child-item {{ request()->is('checkout/orders/invoice/*','checkout/orders/view/*','checkout/orders/manage','checkout/customers/manage') ? 'open-item active-item':'' }} close-item">
+                                    <a><i class="fa fa-mail-forward" aria-hidden="true"></i><span>Checkout</span></a>
+                                    <ul class="nav child-nav level-1">
+                                        <li class="{{ request()->is('checkout/orders/manage') ? 'active-item':'' }}"><a href="{{ route('checkout.orders.manage') }}">Manage Orders </a></li>
+                                        <li class="{{ request()->is('checkout/customers/manage') ? 'active-item':'' }}"><a href="{{ route('checkout.customers.manage') }}">Manage Customers </a></li>
+                                    </ul>
+                                </li>
+
                             </ul>
                         </nav>
                     </div>

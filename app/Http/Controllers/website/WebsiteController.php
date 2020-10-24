@@ -9,6 +9,8 @@ use App\Models\Category;
 use App\Models\SubCategory;
 use App\Models\Product;
 use App\Models\Slider;
+use App\Models\ProductReview;
+use Session;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
@@ -101,6 +103,34 @@ class WebsiteController extends Controller
 
         }
 
+    }
+
+
+
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function reviewCreate(Request $request){
+        //return $request;
+
+        $request->validate([
+            "product" => "required",
+            "rating" => "required",
+            "message" => "required",
+
+        ]);
+        ProductReview::create([
+            "customer_id" => Session::get("customerId"),
+            "product_id" => $request->product,
+            "rating" => $request->rating,
+            "message" => $request->message,
+
+        ]);
+        setMessage('success', 'Your Review Has Been Successfully Send.');
+//
+        return redirect()->back();
     }
 
 
