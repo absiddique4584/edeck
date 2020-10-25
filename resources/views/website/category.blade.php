@@ -1,7 +1,7 @@
 @extends('website.components.layout')
 
 @section('title')
-    edeck
+    edeck | Category-Wise-Product
 @endsection
 
 @section('content')

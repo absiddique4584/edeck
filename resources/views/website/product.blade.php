@@ -1,7 +1,7 @@
 @extends('website.components.layout')
 
 @section('title')
-    edeck
+    edeck | Products Details
 @endsection
 
 @section('content')
@@ -38,8 +38,6 @@
                                                                 <img src="{{asset('uploads/product/'.$newProduct->thumbnail)}}" alt="">
                                                             </a>
                                                         </div><!-- /.image -->
-
-
                                                     </div><!-- /.product-image -->
                                                 </div><!-- /.col -->
                                                 <div class="col col-xs-7">
@@ -68,22 +66,66 @@
                         </div>
                     </div><!-- /.sidebar-widget-body -->
                 </div><!-- /.sidebar-widget -->
-                <!-- ============================================== SPECIAL OFFER : END ============================================== -->
-<!-- ============================================== NEWSLETTER ============================================== -->
-                <div class="sidebar-widget newsletter wow fadeInUp outer-bottom-small outer-top-vs">
-                    <h3 class="section-title">Newsletters</h3>
+                <!--------------------------------->
+
+                <!--------------------------------->
+                <div class="sidebar-widget outer-bottom-small wow fadeInUp">
+                    <h3 class="section-title">Special Products</h3>
                     <div class="sidebar-widget-body outer-top-xs">
-                        <p>Sign Up for Our Newsletter!</p>
-                        <form role="form">
-                            <div class="form-group">
-                                <label class="sr-only" for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Subscribe to our newsletter">
+                        <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
+
+
+                            @php($sl=1)
+                            @php($total = count($specialProducts))
+                            @foreach($specialProducts as $specialProduct)
+
+                                @if(($sl % 4) == 1)
+                            <div class="item">
+                                <div class="products special-product">
+                                    @endif
+
+
+                                    <div class="product">
+                                        <div class="product-micro">
+                                            <div class="row product-micro-row">
+                                                <div class="col col-xs-5">
+                                                    <div class="product-image">
+                                                        <div class="image">
+                                                            <a href="#">
+                                                                <img src="{{asset('uploads/product/'.$specialProduct->thumbnail)}}" alt="">
+                                                            </a>
+                                                        </div><!-- /.image -->
+
+
+                                                    </div><!-- /.product-image -->
+                                                </div><!-- /.col -->
+                                                <div class="col col-xs-7">
+                                                    <div class="product-info">
+                                                        <h3 style="overflow: hidden; height: 30px;" class="name"><a href="#">{{$specialProduct->name}}</a></h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="product-price">
+				                                 <span class="price">&#2547;{{$specialProduct->selling_price}} </span>
+
+                                                        </div><!-- /.product-price -->
+
+                                                    </div>
+                                                </div><!-- /.col -->
+                                            </div><!-- /.product-micro-row -->
+                                        </div><!-- /.product-micro -->
+
+                                    </div>
+                                  @if(($sl % 4) == 0 || $sl == $total)
+
+                                </div>
                             </div>
-                            <button class="btn btn-primary">Subscribe</button>
-                        </form>
+                                @endif
+                                @php($sl++)
+                            @endforeach
+
+                        </div>
                     </div><!-- /.sidebar-widget-body -->
                 </div><!-- /.sidebar-widget -->
-                <!-- ============================================== NEWSLETTER: END ============================================== -->
+                <!--------------------------------->
 
 
             </div>

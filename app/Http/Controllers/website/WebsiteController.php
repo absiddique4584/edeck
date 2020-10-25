@@ -88,7 +88,10 @@ class WebsiteController extends Controller
             $product =  Product::where('id',$id)
                 ->where('status',Product::ACTIVE_PRODUCT)
                 ->first();
-           // return $product;
+            $products =  Product::where('id',$id)
+                ->where('status',Product::ACTIVE_PRODUCT)
+                ->first();
+            //return $products;
             $relatedProducts =  Product::where('id' , '!=' , $product->id)
                 ->where('subcat_id',$product->subcat_id)
                 ->where('status',Product::ACTIVE_PRODUCT)
@@ -99,11 +102,17 @@ class WebsiteController extends Controller
                 ->orderBy('id','DESC')
                 ->limit(12)
                 ->get();
-            return view('website.product',compact('product','relatedProducts','newProducts'));
+            $specialProducts =  Product::where('status',Product::ACTIVE_PRODUCT)
+                ->orderBy('id','ASC')
+                ->limit(12)
+                ->get();
+            return view('website.product',compact('product','relatedProducts','newProducts','products','specialProducts'));
 
         }
 
     }
+
+
 
 
 
